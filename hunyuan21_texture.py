@@ -188,7 +188,7 @@ def run_hunyuan_paint(mesh_path: str, output_path: str, prompt: str,
     # Run Hunyuan3D-2.1 (https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)
     if hunyuan3d_paint_pipeline is None:    
         hunyuan3d_paint_pipeline = Hunyuan3DPaintPipeline(Hunyuan3DPaintConfig(max_num_view=6, resolution=512))
-    glb_path = hunyuan3d_paint_pipeline(mesh_path=mesh_path, image_path=os.path.join(work_dir_local, 'reference.png'), output_mesh_path=output_path, use_remesh=False).replace('.obj', '.glb')
+    glb_path = hunyuan3d_paint_pipeline(mesh_path=mesh_path, image_path=os.path.join(work_dir_local, 'reference.png'), output_mesh_path=output_path, use_remesh=True).replace('.obj', '.glb')
     
     breakpoint()
     return glb_path
