@@ -189,3 +189,4 @@ hy3dpaint/ckpt/
 *.ply
 *.obj
 *.glb
+*.mtl
